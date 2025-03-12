@@ -1,1 +1,22 @@
+<script type = "text/javascript">
+var num, dec= 0
+var bin = " "
 
+document.write ("Escreva um número positivo para que o algoritmo transforme de decimal para binário:");
+
+num: parseint (window.prompt "Digite um número inteiro:"){
+
+if (num >= 0) {
+        while (num > 0) {
+            if (num % 2 === 0) {
+                bin = "0" + bin;
+            } else {
+                bin = "1" + bin;
+            }
+            num = Math.floor(num / 2); // Usa Math.floor para garantir divisão inteira
+        }
+        document.write("O número em binário é: " + bin);
+    } else {
+        document.write("Digite um número positivo.");
+    }
+</script>
