@@ -1,22 +1,25 @@
-<script type = "text/javascript">
-var num, dec= 0
-var bin = " "
+<script type="text/javascript">
+    var num, bin = "";
+    var dec = 0;
 
-document.write ("Escreva um número positivo para que o algoritmo transforme de decimal para binário:");
+    // Solicita entrada do usuário
+    num = parseInt(window.prompt("Digite um número inteiro positivo:"));
 
-num: parseint (window.prompt "Digite um número inteiro:"){
-
-if (num >= 0) {
-        while (num > 0) {
-            if (num % 2 === 0) {
-                bin = "0" + bin;
-            } else {
-                bin = "1" + bin;
+    if (num >= 0) {
+        if (num === 0) {
+            bin = "0"; // Caso especial para o número 0
+        } else {
+            while (num > 0) {
+                if (num % 2 === 0) {
+                    bin = "0" + bin;
+                } else {
+                    bin = "1" + bin;
+                }
+                num = Math.floor(num / 2);
             }
-            num = Math.floor(num / 2); // Usa Math.floor para garantir divisão inteira
         }
         document.write("O número em binário é: " + bin);
     } else {
-        document.write("Digite um número positivo.");
+        document.write("Por favor, digite um número positivo.");
     }
 </script>
